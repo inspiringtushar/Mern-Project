@@ -1,5 +1,14 @@
 import "./App.css";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import LandingPage from "./components/Screens/LandingPage/LandingPage";
 
-const App = () => <h1 className="App">Hello World </h1>;
+const App = () => (
+  <>
+    <Header />
+    <LandingPage />
+    <Footer />
+  </>
+);
 
 export default App;
