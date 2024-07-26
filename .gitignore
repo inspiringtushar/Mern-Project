@@ -310,7 +310,6 @@ FakesAssemblies/
 node_modules/
 frontend/node_modules
 /node_modules
-.env
 
 # Visual Studio 6 build log
 *.plg

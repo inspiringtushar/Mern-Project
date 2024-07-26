@@ -3,9 +3,11 @@ import MainScreen from "../../MainScreen/MainScreen";
 import { Link } from "react-router-dom";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const MyNotes = () => {
   const [notes, setNotes] = useState([]);
+  const {userInfo} = useSelector((state) => state.userLogin);
   useEffect(() => {
     console.log("inside!!");
     try {
@@ -23,7 +25,7 @@ const MyNotes = () => {
     window.confirm("Are you sure to confirm?");
   };
   return (
-    <MainScreen title="Welcome back Tushar Mangla....">
+    <MainScreen title={`Welcome back ${userInfo?.name}....`}>
       <Link to="/createnote">
         <Button style={{ marginLeft: 10, marginBottom: 6 }} size="lg">
           Create New Note

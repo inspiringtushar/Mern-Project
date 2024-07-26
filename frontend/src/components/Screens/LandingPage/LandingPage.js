@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -12,12 +13,12 @@ const LandingPage = () => {
               <h1 className="title">Welcome to Note Zipper</h1>
               <p className="subtitle">One safe place to all your notes.</p>
               <div className="buttonContainer">
-                <a href="/login">
+                <Link to="/login">
                   <Button size="lg" className="landingbutton">
                     Login
                   </Button>
-                </a>
-                <a href="/register">
+                </Link>
+                <Link to="/register">
                   <Button
                     size="lg"
                     className="landingbutton"
@@ -25,7 +26,7 @@ const LandingPage = () => {
                   >
                     Signup
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
